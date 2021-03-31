@@ -1,0 +1,47 @@
+.todos__item{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    transition: .35s all ease;
+    cursor: pointer;
+}
+
+.todos__item:hover{
+    background-color:rgb(239, 239, 239);
+    border-radius: 10px;
+}
+
+.todos__label{
+    font-size: 22px;
+    width: 100%;
+}
+
+.todos__label_done{
+    text-decoration: line-through;
+}
+
+.todos__label_important{
+    color: yellow;
+}
+
+.todos__container{
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-trash-alt,.fa-star{
+    transition: .35s color;
+}
+
+.fa-star:hover{
+    color: yellow;
+}
+
+.fa-trash-alt:hover{
+    color: red;
+}

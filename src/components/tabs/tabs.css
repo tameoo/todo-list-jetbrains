@@ -1,0 +1,27 @@
+.tabs{
+    position: absolute;
+    top: -40px;
+    right: 40px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs__btn{
+    height: 40px;
+    padding: 5px;
+    font-size: 22px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 10px 0px 0px 0px;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+.tabs__btn:hover{
+    box-shadow: 0px -2px 3px 0px #000;
+}
+
+.tabs__btn_active{
+    background-color:#e1a667;
+    color: #fff;
+}
