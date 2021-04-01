@@ -25,21 +25,22 @@
 }
 
 .todos__label_important{
-    color: yellow;
+    color: greenyellow;
 }
 
 .todos__container{
-    width: 50px;
+    width: 60px;
     display: flex;
     justify-content: space-between;
 }
 
 .fa-trash-alt,.fa-star{
-    transition: .35s color;
+    font-size: 19px;
+    transition: .2s color;
 }
 
 .fa-star:hover{
-    color: yellow;
+    color: greenyellow;
 }
 
 .fa-trash-alt:hover{

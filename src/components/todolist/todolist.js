@@ -2,11 +2,11 @@ import React from 'react';
 import TodoItem from '../todoitem';
 import './todolist.css';
 
-const Todolist = ({todos,OnDeleteTodo}) => {
+const Todolist = ({todos, OnDoneTodo, OnImportantTodo, OnDeleteTodo}) => {
 
     const todosItemsBuild = (todos) => {
-        return todos.map((todo, i ) => {
-            return <TodoItem todo={todo} key={i++} OnDeleteTodo={OnDeleteTodo} />;
+        return todos.map((todo) => {
+            return <TodoItem todo={todo} key={todo.id} OnDoneTodo={OnDoneTodo} OnImportantTodo={OnImportantTodo} OnDeleteTodo={OnDeleteTodo} />;
         });
     }
     
