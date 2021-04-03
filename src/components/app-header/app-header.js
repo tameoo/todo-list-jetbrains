@@ -4,10 +4,10 @@ import './app-header.css';
 const Header = ({active, done}) => {
     return (
         <div className="header">
-            <div className="header__logo">
+            <div className="header-logo">
             To-do List
             </div>
-            <div className="header__counter">
+            <div className="header-counter">
                 {active} active, {done} done.
             </div>
         </div>

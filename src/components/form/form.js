@@ -5,8 +5,8 @@ const Form = ({OnSubmitTodo}) => {
 
     return (
         <form className="form" autoComplete="off" onSubmit={(e) => OnSubmitTodo(e, e.target['todo'].value)}>
-            <input className="form__input" name="todo" type="text" placeholder="Add to-do here"/>
-            <button className="btn form__btn">Add</button>
+            <input className="form-input" name="todo" type="text" placeholder="Add to-do here"/>
+            <button className="btn form-btn">Add</button>
         </form>
     );
 }

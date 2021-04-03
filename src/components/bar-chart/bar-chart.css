@@ -1,0 +1,91 @@
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.bar{
+    position: relative;
+    width: 650px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 13px;
+    box-shadow: 0px 0px 6px 3px #6e6e6e;
+    padding: 20px 20px 20px 50px
+}
+
+.bar-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    font-size: 22px;
+    transition: .2s color;
+    cursor: pointer;
+}
+
+.bar-btn:hover{
+    color: #e1a667;
+}
+
+.bar-list-items{
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    list-style-type: none;
+    padding-bottom: 5px;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.bar-list-names{
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    list-style-type: none;
+}
+
+.bar-counter{
+    position: absolute;
+    left: 20px;
+    height: 81%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.bar-item{
+    width: 40px;
+    background-color: greenyellow;
+    animation: growBarChart .5s ease;
+}
+
+@keyframes growBarChart {
+    from {
+        height: 0px;
+    }
+    
+    to {
+        height: attr(data-height);
+    }
+}
+
+.bar-value{
+    position: absolute;
+    background-color:#e1a667;
+    display: block;
+}
+
+.hide{
+    display: none;
+}

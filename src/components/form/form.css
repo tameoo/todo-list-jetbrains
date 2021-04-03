@@ -5,7 +5,7 @@
     margin-bottom: 40px;
 }
 
-.form__input{
+.form-input{
     flex: 1;  
     height: 55px;
     font-size: 22px;
@@ -15,7 +15,7 @@
     border: 3px #fad393 dashed;
 }
 
-.form__btn{
+.form-btn{
     width: 150px;
     height: 55px;
     padding: 10px;
@@ -23,7 +23,7 @@
     transition: .35s all;
 }
 
-.form__btn:hover{
+.form-btn:hover{
     background-color:#e1a667;
     color: #fff;
 }

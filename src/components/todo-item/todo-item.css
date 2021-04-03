@@ -1,4 +1,4 @@
-.todos__item{
+.todos-item{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -10,25 +10,25 @@
     cursor: pointer;
 }
 
-.todos__item:hover{
+.todos-item:hover{
     background-color:rgb(239, 239, 239);
     border-radius: 10px;
 }
 
-.todos__label{
+.todos-label{
     font-size: 22px;
     width: 100%;
 }
 
-.todos__label_done{
+.todos-label-done{
     text-decoration: line-through;
 }
 
-.todos__label_important{
+.todos-label-important{
     color: greenyellow;
 }
 
-.todos__container{
+.todos-container{
     width: 60px;
     display: flex;
     justify-content: space-between;

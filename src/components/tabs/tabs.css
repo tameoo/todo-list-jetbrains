@@ -1,13 +1,14 @@
 .tabs{
     position: absolute;
     top: -40px;
-    right: 40px;
+    right: 30px;
     width: 180px;
     display: flex;
     justify-content: space-between;
+    list-style-type: none;
 }
 
-.tabs__btn{
+.tabs-btn{
     height: 40px;
     padding: 5px;
     font-size: 22px;
@@ -17,11 +18,11 @@
     transition: .2s all;
 }
 
-.tabs__btn:hover{
+.tabs-btn:hover{
     box-shadow: 0px -2px 3px 0px #000;
 }
 
-.tabs__btn_active{
+.tabs-btn-active{
     background-color:#e1a667;
     color: #fff;
 }

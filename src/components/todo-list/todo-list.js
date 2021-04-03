@@ -1,8 +1,8 @@
 import React from 'react';
-import TodoItem from '../todoitem';
-import './todolist.css';
+import TodoItem from '../todo-item';
+import './todo-list.css';
 
-const Todolist = ({todos, OnDoneTodo, OnImportantTodo, OnDeleteTodo}) => {
+const TodoList = ({todos, OnDoneTodo, OnImportantTodo, OnDeleteTodo}) => {
 
     const todosItemsBuild = (todos) => {
         return todos.map((todo) => {
@@ -17,11 +17,13 @@ const Todolist = ({todos, OnDoneTodo, OnImportantTodo, OnDeleteTodo}) => {
     }
 
     return (
-        <ul className="todos">
-            <h2 className="todos__header">{text}</h2>
-           { todosItemsBuild(todos) }
-        </ul>
+        <>
+            <h2 className="todos-header">{text}</h2>
+            <ul className="todos">
+                { todosItemsBuild(todos) }
+            </ul>
+        </>
     );
 }
 
-export default Todolist;
+export default TodoList;

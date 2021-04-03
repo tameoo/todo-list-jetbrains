@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../app-header';
 import Tabs from '../tabs';
-import Todolist from '../todolist';
+import TodoList from '../todo-list';
 import Form from '../form';
+import BarChart from '../bar-chart';
 import { getTodo, postTodo, updateTodo, deleteTodo} from '../../service';
 import './app.css';
 
@@ -10,6 +11,7 @@ const App = () => {
     
     const [todos, setTodos] = useState([]);
     const [checking, setCheck] = useState('all');
+    const [hideBarChart, setBarChart] = useState(true);
 
     useEffect(() => {
         const fetchData = async ()=> {
@@ -88,17 +90,22 @@ const App = () => {
         }
     }
 
+    const OnToggleBarChart = () => {
+        setBarChart(!hideBarChart);
+    }
+
     const active = todos.filter(el => !el.done).length;
     const done = todos.filter(el => el.done).length;
 
     return (
         <div className="app">
-            <div className="app__container">
-               <Tabs OnFilterTodo={OnFilterTodo} />
-               <Header active={active} done={done} />
-               <Form OnSubmitTodo={OnSubmitTodo} />
-               <Todolist todos={modifyTodo(todos, checking)} OnDoneTodo={OnDoneTodo} OnImportantTodo={OnImportantTodo} OnDeleteTodo={OnDeleteTodo} />
-           </div>
+            <div className="app-container">
+                <Tabs OnFilterTodo={OnFilterTodo} OnToggleBarChart={OnToggleBarChart} />
+                <Header active={active} done={done} />
+                <Form OnSubmitTodo={OnSubmitTodo} />
+                <TodoList todos={modifyTodo(todos, checking)} OnDoneTodo={OnDoneTodo} OnImportantTodo={OnImportantTodo} OnDeleteTodo={OnDeleteTodo} />
+            </div>
+            <BarChart todos={modifyTodo(todos, 'done')} hideBarChart={hideBarChart} OnToggleBarChart={OnToggleBarChart}/> 
         </div>
     );
 }
