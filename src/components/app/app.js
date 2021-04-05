@@ -33,7 +33,8 @@ const App = () => {
                 label: label,
                 done: false,
                 important : false,
-                date: new Date().getDay() 
+                created_date: new Date().getDay(),
+                completed_date: null 
             };
             
             e.target.reset();
@@ -53,11 +54,12 @@ const App = () => {
         const index = todoFindIndex(id);
         const withDone = {
             ...todos[index],
-            done: !todos[index].done
+            done: !todos[index].done,
+            completed_date: new Date().getDay()
         }
 
         setTodos([...todos.slice(0, index), withDone, ...todos.slice(index + 1, todos.length)]);
-        updateTodo(id,withDone);
+        updateTodo(id, withDone,);
     }
     
     const OnImportantTodo = (id) => {
@@ -68,7 +70,7 @@ const App = () => {
         }
 
         setTodos([...todos.slice(0, index), withImportant, ...todos.slice(index + 1, todos.length)]);
-        updateTodo(id,withImportant);
+        updateTodo(id, withImportant);
     }
 
     const OnFilterTodo = (tab) => {

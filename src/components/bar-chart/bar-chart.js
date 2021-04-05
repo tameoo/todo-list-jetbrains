@@ -3,7 +3,7 @@ import './bar-chart.css';
 
 const BarChart = ({todos, hideBarChart,OnToggleBarChart}) => {
     
-    const charts = todos.map(todo => todo.date);
+    const charts = todos.map(todo => todo.completed_date);
     const week = [1,2,3,4,5,6,7];
     const graphs = [];
     
